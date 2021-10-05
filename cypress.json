@@ -1,0 +1,8 @@
+{
+  "baseUrl": "https://www.bookdoc.com",
+  "defaultCommandTimeout": 10000,
+  "viewportHeight": 1920,
+  "viewportWidth": 1080,
+  "experimentalSessionSupport": true,
+  "projectId": "tz214e"
+}

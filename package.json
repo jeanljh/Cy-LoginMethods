@@ -1,0 +1,14 @@
+{
+  "name": "cy-loginmethods",
+  "version": "1.0.0",
+  "description": "Different ways to login faster",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run --record --key eb53f42c-3fd2-48b8-a283-28d642185419"
+  },
+  "author": "jean",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.5.0"
+  }
+}
