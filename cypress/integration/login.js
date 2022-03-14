@@ -2,11 +2,15 @@
 import data from '../fixtures/testdata.json'
 
 describe('Methods to Login', () => {
-    // The cy.session() caches and restores cookies, localStorage and sessionStorage after a successful login. 
-    // First login creates the session and subsequent calls will restore the session from cache.
-    it('Test login via cache session', () => {
-        cy.login(data.email, data.pwd, data.user)
-        cy.visit('/')
+    context('Test login via cache session', () => {
+        // The cy.session() caches and restores cookies, localStorage and sessionStorage after a successful login. 
+        // First login creates the session and subsequent calls will restore the session from cache.
+        before(() => cy.login(data.email, data.pwd, data.user))
+    
+        it('Test login is restored from cache session', () => {
+            cy.visit('/search-book')
+            cy.get('.dropdown-toggle.btn').invoke('text').should('eq', 'qa')
+        })
     })
 
     // Login via cy.request() by calling the login API

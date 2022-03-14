@@ -26,10 +26,11 @@
 
 Cypress.Commands.add('login', (email, pwd, user) => {
     cy.session([email,pwd], () => {
-        cy.visit('/login')
-        cy.get('#login__email').type(email)
-        cy.get('#login__password').type(pwd)
-        cy.get('.btn--danger-single').click()
-        cy.get('.text-value').children().invoke('text').should('eq', user)
+        cy.visit('/search-book')
+        cy.get('.desktop-v .login-btn').click()
+        cy.get('#email-input').type(email)
+        cy.get('#password-input').type(pwd)
+        cy.contains('.login-form button', 'Sign In').click()
+        cy.get('.dropdown-toggle.btn').invoke('text').should('eq', user)
     })
 })
