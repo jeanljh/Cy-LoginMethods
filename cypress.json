@@ -3,6 +3,6 @@
   "defaultCommandTimeout": 10000,
   "viewportHeight": 1080,
   "viewportWidth": 1920,
-  "experimentalSessionSupport": true,
+  "experimentalSessionAndOrigin": true,
   "projectId": "tz214e"
 }
